@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CréditImmobilier.Components"
+             x:Class="CréditImmobilier.MainPage"
+             BackgroundColor="#111722">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+
+            <Label Text="Simulateur de Crédit Immobilier"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#E7EEF9"
+                   HorizontalOptions="Center"/>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
+
+                <Border BackgroundColor="#1A2230" Stroke="#2B3950" StrokeThickness="1" Padding="15" StrokeShape="RoundRectangle 10">
+                    <VerticalStackLayout Spacing="15">
+                        <Label Text="Paramètres du crédit"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="#DCE7F7"/>
+
+                        <Entry x:Name="CapitalEntry"
+                               Placeholder="Capital emprunté (€)"
+                               PlaceholderColor="#8FA1BA"
+                               TextColor="#F1F6FF"
+                               BackgroundColor="#243247"
+                               Keyboard="Numeric"/>
+
+                        <Entry x:Name="DurationEntry"
+                               Placeholder="Durée (années)"
+                               PlaceholderColor="#8FA1BA"
+                               TextColor="#F1F6FF"
+                               BackgroundColor="#243247"
+                               Keyboard="Numeric"/>
+
+                        <Picker x:Name="RatePicker"
+                                Title="Type de taux"
+                                TitleColor="#8FA1BA"
+                                TextColor="#F1F6FF"
+                                BackgroundColor="#243247">
+                            <Picker.Items>
+                                <x:String>BadRate</x:String>
+                                <x:String>GoodRate</x:String>
+                                <x:String>ExcellentRate</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                        <Button Text="Calculer"
+                                Clicked="OnCalculateClicked"
+                                BackgroundColor="#4C8DFF"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                Margin="0,6,0,0"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Column="1" BackgroundColor="#1A2230" Stroke="#2B3950" StrokeThickness="1" Padding="15" StrokeShape="RoundRectangle 10">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Profil emprunteur"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               Margin="0,0,0,2"
+                               TextColor="#DCE7F7"/>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <CheckBox x:Name="SportifCheck" Color="#66A3FF"/>
+                            <Label Text="Sportif" VerticalOptions="Center" TextColor="#E6EEFC"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <CheckBox x:Name="FumeurCheck" Color="#66A3FF"/>
+                            <Label Text="Fumeur" VerticalOptions="Center" TextColor="#E6EEFC"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <CheckBox x:Name="CardiacCheck" Color="#66A3FF"/>
+                            <Label Text="Troubles cardiaques" VerticalOptions="Center" TextColor="#E6EEFC"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <CheckBox x:Name="EngineerCheck" Color="#66A3FF"/>
+                            <Label Text="Ingénieur informatique" VerticalOptions="Center" TextColor="#E6EEFC"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <CheckBox x:Name="PilotCheck" Color="#66A3FF"/>
+                            <Label Text="Pilote de chasse" VerticalOptions="Center" TextColor="#E6EEFC"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <Editor x:Name="ResultLabel"
+                    AutoSize="TextChanges"
+                    IsReadOnly="True"
+                    FontSize="14"
+                    TextColor="#DDEAFF"
+                    BackgroundColor="#1A2A3A"
+                    Margin="0,10,0,10"/>
+
+            <local:AmortizationTable x:Name="AmortizationTableComponent"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

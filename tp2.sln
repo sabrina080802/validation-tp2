@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp2", "tp2\tp2.csproj", "{9E6D3C1B-BFA4-4A15-B398-ABE962D247CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CréditImmobilier", "CréditImmobilier\CréditImmobilier.csproj", "{180A93B0-22EF-4969-AE0B-5A0FDC9A9B9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{9E6D3C1B-BFA4-4A15-B398-ABE962D247CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E6D3C1B-BFA4-4A15-B398-ABE962D247CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E6D3C1B-BFA4-4A15-B398-ABE962D247CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180A93B0-22EF-4969-AE0B-5A0FDC9A9B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180A93B0-22EF-4969-AE0B-5A0FDC9A9B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180A93B0-22EF-4969-AE0B-5A0FDC9A9B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180A93B0-22EF-4969-AE0B-5A0FDC9A9B9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
